@@ -7,11 +7,12 @@ Proxmox system monitoring dashboard for 3.5" USB LCD (AX206 / ID 1908:0102).
 
 ## 🇹🇭 ภาษาไทย (Thai)
 
-โปรเจกต์นี้ช่วยให้คุณสามารถติดตั้งจอ Monitor แสดงผลสถานะเครื่อง Proxmox (CPU, RAM, GPU Tesla P4, Disk) ได้อย่างง่ายดาย
+โปรเจกต์นี้ช่วยให้คุณสามารถติดตั้งจอ Monitor แสดงผลสถานะเครื่อง Proxmox ได้อย่างมืออาชีพ
 
-### ฟีเจอร์
-- **AIDA64 Style:** หน้าจอออกแบบมาให้เหมือน Sensor Panel ระดับมืออาชีพ
-- **NVIDIA Support:** ดึงค่าการใช้งานและอุณหภูมิของ Tesla P4 หรือการ์ดจอ NVIDIA อื่นๆ มาแสดงผล
+### ฟีเจอร์ใหม่ (Latest Update)
+- **AIDA64 Color Style:** หน้าจอออกแบบมาให้เหมือน Sensor Panel พร้อมแถบสีนีออน (เขียว, เหลือง, ฟ้า)
+- **Centered Layout:** จัดวางตำแหน่งให้อยู่กึ่งกลางหน้าจอ อ่านง่าย สบายตา
+- **NVIDIA Tesla P4 Support:** ดึงค่า Load และ Temp ของการ์ดจอมาโชว์แบบ Real-time
 - **Auto-Boot:** ทำงานอัตโนมัติทันทีที่เปิดเครื่อง
 
 ### วิธีติดตั้ง
@@ -26,12 +27,13 @@ Proxmox system monitoring dashboard for 3.5" USB LCD (AX206 / ID 1908:0102).
 
 ## 🇺🇸 English
 
-This project provides an easy way to set up a hardware monitoring dashboard for Proxmox using a 3.5" USB LCD.
+A professional hardware monitoring dashboard for Proxmox using a 3.5" USB LCD.
 
-### Features
-- **AIDA64 Style:** Professional-looking sensor panel layout.
-- **NVIDIA Support:** Displays utilization and temperature for Tesla P4 or other NVIDIA GPUs.
-- **Auto-Boot:** Automatically starts the monitoring service on system boot.
+### Key Features
+- **AIDA64 Color Style:** Professional sensor panel layout with neon colored bars (Green, Yellow, Cyan).
+- **Centered Layout:** Optimized positioning for better visibility.
+- **NVIDIA Tesla P4 Optimized:** Real-time monitoring for GPU utilization and temperature.
+- **Auto-Boot:** Starts automatically on system startup.
 
 ### Installation
 1. Clone this repository to your Proxmox host.
@@ -44,6 +46,5 @@ This project provides an easy way to set up a hardware monitoring dashboard for 
 ---
 
 ## 🛠 Prerequisites / ข้อกำหนด
-- **Kernel Compatibility:** This setup is tested and optimized for **Kernel 6.14.x**. (Kernel 6.17+ may require custom NVIDIA driver patches).
-- **GPU:** NVIDIA Driver must be installed on the host for GPU monitoring to work.
-
+- **Kernel Compatibility:** Optimized for **Kernel 6.14.x**.
+- **GPU:** Requires NVIDIA Driver installed on the host.
