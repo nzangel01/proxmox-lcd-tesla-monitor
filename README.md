@@ -1,23 +1,27 @@
-# Proxmox LCD 3.5" Monitor (NVIDIA Tesla P4 Optimized)
+# 🖥️ Proxmox LCD 3.5" Monitor (Tesla P4 Optimized)
 
-Proxmox system monitoring dashboard for 3.5" USB LCD (AX206 / ID 1908:0102).
-แดชบอร์ดตรวจสอบสถานะระบบ Proxmox สำหรับจอ LCD USB 3.5" (รุ่น AX206)
+A professional system monitoring dashboard for 3.5" USB LCD (AX206 / ID 1908:0102) on Proxmox VE.
+แดชบอร์ดตรวจสอบสถานะระบบ Proxmox ระดับมืออาชีพ สำหรับจอ LCD USB 3.5" (รุ่น AX206)
 
 ---
 
 ## 🇹🇭 ภาษาไทย (Thai)
 
-โปรเจกต์นี้ช่วยให้คุณสามารถติดตั้งจอ Monitor แสดงผลสถานะเครื่อง Proxmox ได้อย่างมืออาชีพ
+โปรเจกต์นี้ช่วยให้คุณสามารถติดตั้งจอ Monitor แสดงผลสถานะเครื่อง Proxmox (CPU, RAM, GPU Tesla P4, Disk) ได้อย่างง่ายดาย ด้วยหน้าจอที่ออกแบบมาให้สวยงามเหมือน AIDA64 Sensor Panel
 
-### ฟีเจอร์ใหม่ (Latest Update)
+### ✨ คุณสมบัติ (Features)
 - **AIDA64 Color Style:** หน้าจอออกแบบมาให้เหมือน Sensor Panel พร้อมแถบสีนีออน (เขียว, เหลือง, ฟ้า)
 - **Centered Layout:** จัดวางตำแหน่งให้อยู่กึ่งกลางหน้าจอ อ่านง่าย สบายตา
-- **NVIDIA Tesla P4 Support:** ดึงค่า Load และ Temp ของการ์ดจอมาโชว์แบบ Real-time
-- **Auto-Boot:** ทำงานอัตโนมัติทันทีที่เปิดเครื่อง
+- **NVIDIA Tesla P4 Support:** ดึงค่าการใช้งาน (Load) และอุณหภูมิ (Temp) มาแสดงผลแบบ Real-time
+- **Auto-Start:** ระบบทำงานอัตโนมัติทันทีที่เปิดเครื่อง (Systemd integration)
 
-### วิธีติดตั้ง
-1. Clone โปรเจกต์นี้ลงในเครื่อง Proxmox ของคุณ
-2. รันคำสั่งติดตั้ง:
+### 🚀 วิธีการติดตั้ง (Installation)
+1. **Clone โปรเจกต์:**
+   \`\`\`bash
+   git clone https://github.com/nzangel01/proxmox-lcd-tesla-monitor.git
+   cd proxmox-lcd-tesla-monitor
+   \`\`\`
+2. **รันสคริปต์ติดตั้ง:**
    \`\`\`bash
    chmod +x install.sh
    ./install.sh
@@ -27,17 +31,21 @@ Proxmox system monitoring dashboard for 3.5" USB LCD (AX206 / ID 1908:0102).
 
 ## 🇺🇸 English
 
-A professional hardware monitoring dashboard for Proxmox using a 3.5" USB LCD.
+This project provides a professional-grade hardware monitoring dashboard for Proxmox VE using a 3.5" USB LCD. Inspired by AIDA64 Sensor Panels.
 
-### Key Features
-- **AIDA64 Color Style:** Professional sensor panel layout with neon colored bars (Green, Yellow, Cyan).
-- **Centered Layout:** Optimized positioning for better visibility.
-- **NVIDIA Tesla P4 Optimized:** Real-time monitoring for GPU utilization and temperature.
-- **Auto-Boot:** Starts automatically on system startup.
+### ✨ Key Features
+- **AIDA64 Color Style:** High-visibility layout with vibrant neon bars (Green, Yellow, Cyan).
+- **Centered Layout:** Perfectly balanced positioning for 480x320 resolution.
+- **NVIDIA Tesla P4 Optimized:** Real-time GPU utilization and temperature monitoring.
+- **Auto-Boot:** Automatically starts the monitoring service on system startup.
 
-### Installation
-1. Clone this repository to your Proxmox host.
-2. Run the installer:
+### 🚀 Installation
+1. **Clone the repository:**
+   \`\`\`bash
+   git clone https://github.com/nzangel01/proxmox-lcd-tesla-monitor.git
+   cd proxmox-lcd-tesla-monitor
+   \`\`\`
+2. **Run the installer:**
    \`\`\`bash
    chmod +x install.sh
    ./install.sh
@@ -45,6 +53,10 @@ A professional hardware monitoring dashboard for Proxmox using a 3.5" USB LCD.
 
 ---
 
-## 🛠 Prerequisites / ข้อกำหนด
-- **Kernel Compatibility:** Optimized for **Kernel 6.14.x**.
-- **GPU:** Requires NVIDIA Driver installed on the host.
+## 🛠️ Prerequisites / ข้อกำหนดทางเทคนิค
+- **Kernel Compatibility:** This setup is optimized for **Kernel 6.14.x**. (Note: Proxmox Kernel 6.17+ may require specific NVIDIA driver patches).
+- **Hardware:** Requires a 3.5" USB LCD with Hardware ID \`1908:0102\` (Turing/XuanFang).
+- **Drivers:** NVIDIA Driver must be installed on the Proxmox host for GPU data.
+
+---
+**Created by nzangel01**
